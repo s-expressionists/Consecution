@@ -2,7 +2,7 @@
 
 (defpackage #:sicl-sequence
   (:use #:closer-common-lisp)
-
+  (local-nicknames (#:alx #:alexandria))
   (:import-from
    #:fast-generic-functions
    #:fast-generic-function
