@@ -2,7 +2,7 @@
 
 (defclass sequence-function (fast-generic-function)
   ()
-  (:metaclass funcallable-standard-class))
+  (:metaclass closer-mop:funcallable-standard-class))
 
 (defmethod no-applicable-method
     ((sequence-function sequence-function) &rest arguments)
