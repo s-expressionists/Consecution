@@ -13,7 +13,7 @@
                (and (eql (first rest) :initial-element)
                     (= 2 (length rest)))))
       (let ((type (eval result-type)))
-        (sicl-utilities:with-gensyms (result)
+        (alx:with-gensyms (result)
           `(let ((,result (make-sequence-like ',(reify-sequence-type-specifier type env) ,length ,@rest)))
              (check-result-type ,result ,type)
              ,result)))

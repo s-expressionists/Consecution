@@ -1,8 +1,8 @@
 (cl:in-package #:sicl-sequence)
 
 (defmacro with-test-function ((name test test-not) &body body)
-  (sicl-utilities:with-gensyms (f complementp)
-    (sicl-utilities:once-only (test test-not)
+  (alx:with-gensyms (f complementp)
+    (alx:once-only (test test-not)
       `(multiple-value-bind (,f ,complementp)
            (canonicalize-test-and-test-not ,test ,test-not)
          (declare (function ,f))

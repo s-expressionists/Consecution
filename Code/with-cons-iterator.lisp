@@ -5,8 +5,8 @@
      (list start end)
      &body body)
   (check-type name symbol)
-  (sicl-utilities:once-only (list start end)
-    (sicl-utilities:with-gensyms (head rest index limit)
+  (alx:once-only (list start end)
+    (alx:with-gensyms (head rest index limit)
       `(if (not (typep ,start 'list-length))
            (error 'invalid-start-index
                   :expected-type 'list-length

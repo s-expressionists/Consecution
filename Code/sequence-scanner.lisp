@@ -66,8 +66,8 @@
 (seal-domain #'make-sequence-scanner '(vector))
 
 (defmacro with-sequence-scanner ((name sequence) &body body)
-  (sicl-utilities:once-only (sequence)
-    (sicl-utilities:with-gensyms
+  (alx:once-only (sequence)
+    (alx:with-gensyms
         (sequence-scanner scan-buffer state scan-amount index)
       `(with-scan-buffers (,scan-buffer)
          (multiple-value-bind (,sequence-scanner ,state)
@@ -79,7 +79,7 @@
              (let ((,index 0))
                (declare (scan-amount ,index))
                (macrolet ((,name ()
-                            (sicl-utilities:with-gensyms (retry)
+                            (alx:with-gensyms (retry)
                               `(block nil
                                  (tagbody ,retry
                                     (when (= ,',index ,',scan-amount)

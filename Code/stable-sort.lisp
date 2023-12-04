@@ -13,7 +13,7 @@
              (let* ((n (length conses))
                     (first-cons (nth (first permutation) conses))
                     (last-cons (nth (nth (1- n) permutation) conses)))
-               (sicl-utilities:with-gensyms (rest)
+               (alx:with-gensyms (rest)
                  `(let ((,rest (cdr ,(first (last conses)))))
                     ;; Set the correct successor for each cons.
                     ,@(loop for (i j) on permutation

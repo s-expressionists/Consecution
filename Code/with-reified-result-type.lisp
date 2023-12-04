@@ -10,8 +10,8 @@
 
 (defmacro with-reified-result-type ((prototype result-type) &body body)
   (check-type prototype symbol)
-  (sicl-utilities:once-only (result-type)
-    (sicl-utilities:with-gensyms (result p l)
+  (alx:once-only (result-type)
+    (alx:with-gensyms (result p l)
       `(multiple-value-bind (,p ,l) (reify-sequence-type-specifier ,result-type)
          (let ((,result (let ((,prototype ,p)) ,@body)))
            (unless (or (not ,l)
@@ -174,7 +174,7 @@
             :datum type-specifier))))
 
 (defmacro check-result-type (result type)
-  (sicl-utilities:once-only (result)
+  (alx:once-only (result)
     `(unless (typep ,result ',type)
        (result-type-error ,result ',type))))
 
