@@ -4,11 +4,6 @@
   (:use #:common-lisp)
 
   (:import-from
-   #:closer-mop
-   #:funcallable-standard-class
-   #:class-direct-subclasses)
-
-  (:import-from
    #:fast-generic-functions
    #:fast-generic-function
    #:seal-domain
