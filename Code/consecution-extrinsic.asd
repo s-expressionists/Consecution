@@ -5,6 +5,7 @@
   :depends-on
   ("acclimation"
    "alexandria"
+   "closer-mop"
    "fast-generic-functions")
   :components
   ((:file "packages")
