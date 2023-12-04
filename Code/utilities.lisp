@@ -42,7 +42,8 @@
            (unless (gethash class table)
              (setf (gethash class table) t)
              (push class subclasses)
-             (mapc #'push-subclasses (class-direct-subclasses class)))))
+             (mapc #'push-subclasses
+                   (closer-mop:class-direct-subclasses class)))))
       (push-subclasses class)
       subclasses)))
 
@@ -55,7 +56,7 @@
   (let ((prototype (coerce nil sequence-class)))
     (check-type prototype vector)
     (let ((direct-subclasses
-            (class-direct-subclasses (class-of prototype))))
+            (closer-mop:class-direct-subclasses (class-of prototype))))
       (if (null direct-subclasses)
           (array-element-type prototype)
           `(or ,@(mapcar #'vector-class-element-type direct-subclasses))))))
@@ -65,7 +66,7 @@
 
 (defparameter *specialized-vector-classes*
   (loop for vector-class in *vector-classes*
-        unless (class-direct-subclasses (find-class vector-class))
+        unless (closer-mop:class-direct-subclasses (find-class vector-class))
           collect vector-class))
 
 ;; Some implementations provide a very long list of vector classes, e.g.,
