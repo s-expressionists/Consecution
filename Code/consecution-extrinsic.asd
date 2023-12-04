@@ -4,7 +4,7 @@
   :serial t
   :depends-on
   ("acclimation"
-   "sicl-utilities"
+   "alexandria"
    "fast-generic-functions")
   :components
   ((:file "packages")
