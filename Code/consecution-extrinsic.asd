@@ -1,6 +1,6 @@
 (cl:in-package #:asdf-user)
 
-(defsystem :sicl-sequence
+(defsystem :consecution-extrinsic
   :serial t
   :depends-on
   ("acclimation"
