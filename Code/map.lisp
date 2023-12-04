@@ -5,7 +5,7 @@
       (apply #'map-for-effect function sequence more-sequences)
       (with-reified-result-type (prototype result-type)
         (if (listp prototype)
-            (sicl-utilities:with-collectors ((result collect))
+            (with-collectors ((result collect))
               (let ((function (function-designator-function function)))
                 (declare (function function))
                 (flet ((fn (&rest arguments)
@@ -42,7 +42,7 @@
               ,type
               ,(if (listp prototype)
                    (sicl-utilities:with-gensyms (result collect fn)
-                     `(sicl-utilities:with-collectors ((,result ,collect))
+                     `(with-collectors ((,result ,collect))
                         (flet ((,fn (,@arguments)
                                  (,collect (funcall ,function ,@arguments))))
                           (declare (dynamic-extent (function ,fn)))

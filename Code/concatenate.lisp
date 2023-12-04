@@ -17,7 +17,7 @@
             ,(typecase prototype
                (list
                 (sicl-utilities:with-gensyms (result collect)
-                  `(sicl-utilities:with-collectors ((,result ,collect))
+                  `(with-collectors ((,result ,collect))
                      ,@(loop for (var nil) in bindings collect
                              `(map nil (function ,collect) ,var))
                      (,result))))
@@ -40,7 +40,7 @@
                 `(concatenate-sequence-like ',prototype ,@(mapcar #'first bindings)))))))))
 
 (defmethod concatenate-sequence-like ((list list) &rest sequences)
-  (sicl-utilities:with-collectors ((result collect))
+  (with-collectors ((result collect))
     (loop for sequence in sequences do
       (map nil #'collect sequence))
     (result)))

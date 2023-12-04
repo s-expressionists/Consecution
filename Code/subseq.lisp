@@ -1,7 +1,7 @@
 (cl:in-package #:sicl-sequence)
 
 (defmethod subseq ((list list) start &optional end)
-  (sicl-utilities:with-collectors ((result collect))
+  (with-collectors ((result collect))
     (with-cons-iterator (iterator) (list start end)
       (loop
         (multiple-value-bind (more cons) (iterator)

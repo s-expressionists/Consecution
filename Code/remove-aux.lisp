@@ -11,7 +11,7 @@
             ;; COPY is a list of items that need to be copied if any sublist of
             ;; it starts with an element that satisfies PREDICATE.
             (copy list))
-        (sicl-utilities:with-collectors ((result collect))
+        (with-collectors ((result collect))
           (with-cons-iterator (iterator) (list start end)
             (loop for n-removed fixnum from 0 until (= n-removed count) do
               (loop
