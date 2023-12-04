@@ -3,7 +3,7 @@
 ;;;; Created:  Sun Aug 25 13:06:54 2002
 ;;;; Contains: Tests for SEARCH on strings
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 
 

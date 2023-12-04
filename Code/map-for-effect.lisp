@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (declaim (inline map-for-effect-0))
 (defun map-for-effect-0 (function)

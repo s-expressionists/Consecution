@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defun merge (result-type sequence-1 sequence-2 predicate &key key)
   (with-reified-result-type (prototype result-type)

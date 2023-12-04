@@ -3,7 +3,7 @@
 ;;;; Created:  Sun Jun  8 06:56:15 2003
 ;;;; Contains: Aux. functions and macros used for randomization
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (declaim (special +standard-chars+ *cl-symbols-vector*))
 

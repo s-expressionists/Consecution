@@ -3,7 +3,7 @@
 ;;;; Created:  Tue Nov 26 20:01:27 2002
 ;;;; Contains: Aux. functions for subseq tests
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (defun subseq-list.4-body ()
   (block done

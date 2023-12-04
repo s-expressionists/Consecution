@@ -3,7 +3,7 @@
 ;;;; Created:  Wed Aug 21 00:11:24 2002
 ;;;; Contains: Tests for SORT
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest sort-list.1
   (let ((a (list 1 4 2 5 3)))

@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defclass sequence-function (fast-generic-function)
   ()

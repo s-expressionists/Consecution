@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defun sequence-type-specifier-p (x)
   (and (subtypep x 'sequence)

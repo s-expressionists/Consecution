@@ -3,7 +3,7 @@
 ;;;; Created:  Tue Aug 27 16:11:38 2002
 ;;;; Contains: Tests for REPLACE
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest replace-list.1
   (let* ((x (copy-seq '(a b c d e f g)))

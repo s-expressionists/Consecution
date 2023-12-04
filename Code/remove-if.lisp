@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod remove-if (test (list list) &key from-end (start 0) end count key)
   (with-predicate (predicate test)

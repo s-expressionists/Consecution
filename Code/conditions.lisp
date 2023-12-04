@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (define-condition must-be-nonnegative-integer (type-error)
   ()

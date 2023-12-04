@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Aug 24 07:10:05 2002
 ;;;; Contains: Tests for POSITION-IF-NOT-NOT
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest position-if-not-list.1
   (position-if-not #'oddp '(1 3 1 4 3 2 1 8 9))

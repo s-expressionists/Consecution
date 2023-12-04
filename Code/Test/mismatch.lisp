@@ -3,7 +3,7 @@
 ;;;; Created:  Mon Aug 26 23:55:29 2002
 ;;;; Contains: Tests for MISMATCH
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest mismatch-list.1
   (mismatch '() '(a b c))

@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Oct 12 19:38:29 2002
 ;;;; Contains: Tests of ELT
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (declaim (optimize (safety 3)))
 

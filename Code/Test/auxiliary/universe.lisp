@@ -5,7 +5,7 @@
 ;;;;           as many kinds of CL objects as we can think of
 ;;;;           This list is used to test many other CL functions
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (defparameter *condition-types*
     '(arithmetic-error

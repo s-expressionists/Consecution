@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod map-into ((list list) function &rest sequences)
   (let ((function (function-designator-function function))

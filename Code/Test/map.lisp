@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Aug 17 20:54:48 2002
 ;;;; Contains: Tests for the MAP function
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest map-array.1
   (map 'list #'1+ #(1 2 3 4))

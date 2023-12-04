@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod nsubstitute (newitem olditem (list list)
                         &key from-end test test-not (start 0) end count key)

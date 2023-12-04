@@ -3,7 +3,7 @@
 ;;;; Created:  Wed Aug 28 21:15:33 2002
 ;;;; Contains: Tests for SUBSTITUTE
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest substitute-list.1
   (let ((x '())) (values (substitute 'b 'a x) x))

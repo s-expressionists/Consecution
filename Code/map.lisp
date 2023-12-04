@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defun map (result-type function sequence &rest more-sequences)
   (if (null result-type)

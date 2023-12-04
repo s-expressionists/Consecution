@@ -3,7 +3,7 @@
 ;;;; Created:  Sun Aug 18 14:08:57 2002
 ;;;; Contains: Tests for function REDUCE
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest reduce-list.1
   (reduce #'cons '(a b c d e f))

@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defparameter *delete-duplicates-hash-threshold* 27)
 

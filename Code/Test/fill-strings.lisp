@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Aug 17 08:04:27 2002
 ;;;; Contains: Test cases for FILL on strings
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest array-string-fill.1
   (array-string-fill-test-fn "abcde" #\Z)

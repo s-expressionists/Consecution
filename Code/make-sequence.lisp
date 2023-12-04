@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defun make-sequence (result-type length &key (initial-element nil initial-element-p))
   (with-reified-result-type (prototype result-type)

@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Oct 12 19:44:45 2002
 ;;;; Contains: Tests on FILL
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest fill.error.1
   (signals-error (fill 'a 'b) type-error)

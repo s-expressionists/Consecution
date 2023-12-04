@@ -3,7 +3,7 @@
 ;;;; Created:  Tue Aug 20 22:42:35 2002
 ;;;; Contains: Tests for COUNT-IF-NOT
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest count-if-not-list.1
   (count-if-not #'identity '(a b nil c d nil e))

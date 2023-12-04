@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmacro with-cons-iterator
     ((name &optional (reset nil reset-supplied-p))

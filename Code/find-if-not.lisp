@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod find-if-not (predicate (list list) &key from-end (start 0) end key)
   (declare (method-properties inlineable))

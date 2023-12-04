@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Aug 31 19:00:55 2002
 ;;;; Contains: Tests for NSUBSTITUTE-IF-NOT
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest nsubstitute-if-not-list.1
   (nsubstitute-if-not 'b 'identity nil)

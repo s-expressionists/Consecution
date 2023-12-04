@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod remove-duplicates ((list list) &key from-end test test-not (start 0) end key)
   (delete-duplicates

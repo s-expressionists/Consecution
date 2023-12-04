@@ -1,10 +1,10 @@
 (cl:in-package #:common-lisp-user)
 
-(defpackage #:sicl-sequence
+(defpackage #:consecution
   (:use #:common-lisp)
 
   (:import-from
-   #:sicl-clos
+   #:closer-mop
    #:funcallable-standard-class
    #:class-direct-subclasses)
 

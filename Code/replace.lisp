@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod replace ((list1 list) (list2 list) &key (start1 0) end1 (start2 0) end2)
   (declare (method-properties inlineable))

@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Aug 31 17:42:04 2002
 ;;;; Contains: Tests for SUBSTITUTE-IF
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest substitute-if-list.1
   (let ((x '())) (values (substitute-if 'b #'identity x) x))

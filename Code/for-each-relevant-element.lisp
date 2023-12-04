@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmacro for-each-relevant-element
     ((element-var index-var vector start end &optional (from-end nil)) &body body)

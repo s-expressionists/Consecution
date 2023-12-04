@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Nov  2 21:38:08 2002
 ;;;; Contains: Tests for COPY-SEQ
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 ;;; This function is extensively used elsewhere, but is tested again
 ;;; here for completeness.

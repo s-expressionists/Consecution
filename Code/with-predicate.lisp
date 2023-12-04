@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmacro with-predicate ((name predicate &key (arity 1)) &body body)
   (let ((args (loop repeat arity collect (gensym))))

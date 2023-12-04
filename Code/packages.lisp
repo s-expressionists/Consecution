@@ -1,6 +1,6 @@
 (cl:in-package #:common-lisp-user)
 
-(defpackage #:sicl-sequence
+(defpackage #:consecution
   (:use #:closer-common-lisp)
   (local-nicknames (#:alx #:alexandria))
   (:import-from

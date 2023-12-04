@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod acclimation:report-condition
     ((c must-be-nonnegative-integer)

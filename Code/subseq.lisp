@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod subseq ((list list) start &optional end)
   (with-collectors ((result collect))

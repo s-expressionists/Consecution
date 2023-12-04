@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defun concatenate (result-type &rest sequences)
   (with-reified-result-type (prototype result-type)

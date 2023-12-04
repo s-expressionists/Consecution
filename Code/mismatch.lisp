@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod mismatch ((list1 list) (list2 list)
                      &key from-end test test-not key (start1 0) (start2 0) end1 end2)

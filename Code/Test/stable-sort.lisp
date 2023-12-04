@@ -3,7 +3,7 @@
 ;;;; Created:  Wed Aug 28 21:00:44 2002
 ;;;; Contains: Tests for STABLE-SORT
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest stable-sort-list.1
   (let ((a (list 1 4 2 5 3)))

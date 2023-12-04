@@ -3,7 +3,7 @@
 ;;;; Created:  Sun Aug 18 10:10:04 2002
 ;;;; Contains: Tests for the MAP-INTO function
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest map-into-list.1
   (let ((a (copy-seq '(a b c d e f)))

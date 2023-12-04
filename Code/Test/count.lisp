@@ -3,7 +3,7 @@
 ;;;; Created:  Mon Aug 19 07:31:55 2002
 ;;;; Contains: Tests for COUNT
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest count-list.1
   (count 'a '(a b c d e a e f))

@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmacro with-key-function ((name key) &body body)
   (alx:with-gensyms (f)

@@ -3,7 +3,7 @@
 ;;;; Created:  Fri Sep  6 07:24:17 2002
 ;;;; Contains: Tests for MERGE
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest merge-list.1
   (let ((x (list 1 3 7 8 10))

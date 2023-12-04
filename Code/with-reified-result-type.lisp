@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 ;;; This macro executes BODY in an environment where the variable PROTOTYPE
 ;;; is bound to an instance of the sequence class denoted by RESULT-TYPE,

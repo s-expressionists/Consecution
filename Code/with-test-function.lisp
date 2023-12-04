@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmacro with-test-function ((name test test-not) &body body)
   (alx:with-gensyms (f complementp)

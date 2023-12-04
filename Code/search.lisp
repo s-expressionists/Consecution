@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod search ((pattern list) (text list)
                    &key from-end test test-not key (start1 0) (start2 0) end1 end2)

@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (progn
   (replicate-for-each-vector-class #1=#:vector-class

@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod stable-sort ((list list) predicate &key key)
   (declare (list list))

@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod nreverse ((list list) &aux (result '()))
   (loop until (endp list) do

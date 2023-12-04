@@ -3,7 +3,7 @@
 ;;;; Created:  Tue Aug 20 23:47:28 2002
 ;;;; Contains: Tests for REVERSE
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest reverse-list.1
   (reverse nil)

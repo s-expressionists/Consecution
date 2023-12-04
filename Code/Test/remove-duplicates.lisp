@@ -3,7 +3,7 @@
 ;;;; Created:  Sun Sep 29 20:49:47 2002
 ;;;; Contains: Tests for REMOVE-DUPLICATES, DELETE-DUPLICATES
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 
 

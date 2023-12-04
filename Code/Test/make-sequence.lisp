@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Sep 14 09:58:47 2002
 ;;;; Contains: Tests for MAKE-SEQUENCE
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest make-sequence.1
   (let ((x (make-sequence 'list 4)))

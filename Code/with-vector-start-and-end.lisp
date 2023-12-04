@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmacro with-vector-start-and-end
     ((start-name end-name &optional (length-name nil length-name-p))

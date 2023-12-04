@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod count (item (list list) &key from-end (start 0) end key test test-not)
   (declare (method-properties inlineable))

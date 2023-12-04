@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 ;;; A sequence scanner is a function that takes a sequence, a state, and a
 ;;; scan buffer.  The scanner fills the scan buffer with the elements of

@@ -3,7 +3,7 @@
 ;;;; Created:  Wed Sep  4 22:53:51 2002
 ;;;; Contains: Tests for CONCATENATE
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest concatenate.1
   (concatenate 'list)

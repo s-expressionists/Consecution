@@ -1,4 +1,4 @@
-(cl:in-package #:sicl-sequence)
+(cl:in-package #:consecution)
 
 (defmethod fill ((list list) item &key (start 0) end)
   (declare (method-properties inlineable))

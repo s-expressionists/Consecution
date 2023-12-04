@@ -3,7 +3,7 @@
 ;;;; Created:  Wed Aug 28 20:53:24 2002
 ;;;; Contains: Tests for FIND-IF-NOT
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest find-if-not-list.1
   (find-if-not #'identity ())

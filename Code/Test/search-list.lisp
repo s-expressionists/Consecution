@@ -3,7 +3,7 @@
 ;;;; Created:  Sat Aug 24 07:22:10 2002
 ;;;; Contains: Tests for SEARCH on lists
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 
 

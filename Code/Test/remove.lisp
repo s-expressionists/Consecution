@@ -5,7 +5,7 @@
 
 
 
-(in-package #:sicl-sequence-test)
+(in-package #:consecution-test)
 
 (deftest remove-list.1
   (let* ((orig '(a b c a b d a c b a e))
