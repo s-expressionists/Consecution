@@ -1,6 +1,6 @@
 (cl:in-package #:asdf-user)
 
-(defsystem :sicl-sequence-for-sicl-boot
+(defsystem "consecution-intrinsic"
   :serial t
   :depends-on
   ("acclimation"
