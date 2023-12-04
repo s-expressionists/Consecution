@@ -1,4 +1,4 @@
-(defsystem :sicl-sequence-test
+(defsystem :consecution-test
   :serial t
   :depends-on
   ("consecution" "rt")
