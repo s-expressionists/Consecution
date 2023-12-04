@@ -1,8 +1,8 @@
 (cl:in-package #:common-lisp-user)
 
 (defpackage #:consecution
-  (:use #:closer-common-lisp)
-  (local-nicknames (#:alx #:alexandria))
+  (:use #:common-lisp)
+  (:local-nicknames (#:alx #:alexandria))
   (:import-from
    #:fast-generic-functions
    #:fast-generic-function
