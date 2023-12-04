@@ -1,7 +1,7 @@
 (defsystem :sicl-sequence-test
   :serial t
   :depends-on
-  ("sicl-sequence" "rt")
+  ("consecution" "rt")
   :components
   ((:file "packages")
    (:module "auxiliary"
