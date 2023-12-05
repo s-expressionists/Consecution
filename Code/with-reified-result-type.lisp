@@ -73,7 +73,7 @@
           (let ((class (find-class type-specifier nil environment)))
             (if (not class)
                 (try-slow-path)
-                (class-prototype class))))))
+                (closer-mop:class-prototype class))))))
       (cons
        (case (car type-specifier)
          ;; Cons Type Specifiers.
@@ -152,8 +152,8 @@
          (values nil 0)
          (values '(()) :complicated)))
     ((subtypep type-specifier 'vector environment)
-     (if (classp type-specifier)
-         (values (class-prototype type-specifier) nil)
+     (if (typep type-specifier 'class)
+         (values (closer-mop:class-prototype type-specifier) nil)
          (let ((candidates '()))
            (loop for vector-class in (list* 'simple-vector *specialized-vector-classes*)
                  unless (subtypep `(and ,vector-class ,type-specifier) nil)
@@ -168,7 +168,7 @@
             :complicated))))
     ((and (symbolp type-specifier)
           (find-class type-specifier nil environment))
-     (class-prototype (find-class type-specifier t environment)))
+     (closer-mop:class-prototype (find-class type-specifier t environment)))
     (t
      (error 'must-be-recognizable-subtype-of-sequence
             :datum type-specifier))))
