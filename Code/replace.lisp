@@ -1,5 +1,7 @@
 (cl:in-package #:consecution)
 
+(declaim (declaration method-properties))
+
 (defmethod replace ((list1 list) (list2 list) &key (start1 0) end1 (start2 0) end2)
   (declare (method-properties inlineable))
   ;; We have to be careful to correctly handle the cases where LIST1 and

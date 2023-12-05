@@ -3,6 +3,7 @@
 (defun test ()
   (let ((system (asdf:find-system :consecution-extrinsic/test)))
     (ansi-test-harness:ansi-test
+     :exit t
      :directory (merge-pathnames (make-pathname
                                   :directory '(:relative "dependencies" "ansi-test"))
                                  (asdf:component-pathname system))

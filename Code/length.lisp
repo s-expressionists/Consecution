@@ -1,5 +1,7 @@
 (cl:in-package #:consecution)
 
+(declaim (declaration method-properties))
+
 (defmethod length ((list list))
   (declare (method-properties inlineable))
   (labels ((len (rest counter)

@@ -1,5 +1,7 @@
 (cl:in-package #:consecution)
 
+(declaim (declaration method-properties))
+
 (defmethod fill ((list list) item &key (start 0) end)
   (declare (method-properties inlineable))
   (for-each-relevant-cons (cons index list start end)

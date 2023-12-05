@@ -1,5 +1,7 @@
 (cl:in-package #:consecution)
 
+(declaim (declaration method-properties))
+
 (defmethod find-if (predicate (list list) &key from-end (start 0) end key)
   (declare (method-properties inlineable))
   (with-predicate (predicate predicate)

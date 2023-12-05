@@ -1,5 +1,7 @@
 (cl:in-package #:consecution)
 
+(declaim (declaration method-properties))
+
 (declaim (notinline %invalid-sequence-index))
 (defun %invalid-sequence-index (index sequence end)
   (error 'invalid-sequence-index

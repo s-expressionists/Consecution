@@ -1,5 +1,7 @@
 (cl:in-package #:consecution)
 
+(declaim (declaration method-properties))
+
 (defmethod position (item (list list) &key from-end test test-not (start 0) end key)
   (declare (method-properties inlineable))
   (with-test-function (test test test-not)

@@ -1,5 +1,7 @@
 (cl:in-package #:consecution)
 
+(declaim (declaration method-properties))
+
 (defmethod make-sequence-like ((list list) length
                                &key
                                  (initial-element nil initial-element-p)
