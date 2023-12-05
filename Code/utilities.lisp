@@ -1,5 +1,7 @@
 (cl:in-package #:consecution)
 
+(declaim (declaration method-properties))
+
 (defun power-of-two-p (x)
   (and (integerp x)
        (plusp x)
