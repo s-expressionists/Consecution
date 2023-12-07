@@ -29,6 +29,9 @@
      (declare (scan-buffer ,@scan-buffer-names))
      ,@body))
 
+(defmethod make-sequence-scanner (sequence)
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod make-sequence-scanner ((list list))
   (values
    (the sequence-scanner
@@ -66,8 +69,8 @@
 (seal-domain #'make-sequence-scanner '(vector))
 
 (defmacro with-sequence-scanner ((name sequence) &body body)
-  (alx:once-only (sequence)
-    (alx:with-gensyms
+  (alexandria:once-only (sequence)
+    (alexandria:with-gensyms
         (sequence-scanner scan-buffer state scan-amount index)
       `(with-scan-buffers (,scan-buffer)
          (multiple-value-bind (,sequence-scanner ,state)
@@ -79,7 +82,7 @@
              (let ((,index 0))
                (declare (scan-amount ,index))
                (macrolet ((,name ()
-                            (alx:with-gensyms (retry)
+                            (alexandria:with-gensyms (retry)
                               `(block nil
                                  (tagbody ,retry
                                     (when (= ,',index ,',scan-amount)

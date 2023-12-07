@@ -1,5 +1,8 @@
 (cl:in-package #:consecution)
 
+(defmethod copy-seq (sequence)
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod copy-seq ((list list))
   (loop for element in list collect element))
 

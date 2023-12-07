@@ -16,13 +16,13 @@
           (let ,bindings
             ,(typecase prototype
                (list
-                (alx:with-gensyms (result collect)
+                (alexandria:with-gensyms (result collect)
                   `(with-collectors ((,result ,collect))
                      ,@(loop for (var nil) in bindings collect
                              `(map nil (function ,collect) ,var))
                      (,result))))
                (vector
-                (alx:with-gensyms (length result index collect)
+                (alexandria:with-gensyms (length result index collect)
                   `(let* ((,length (+ ,@(loop for (var nil) in bindings
                                               collect `(length ,var))))
                           (,result (make-sequence-like ',prototype ,length))

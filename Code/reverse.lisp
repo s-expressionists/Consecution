@@ -1,5 +1,8 @@
 (cl:in-package #:consecution)
 
+(defmethod reverse (sequence)
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod reverse ((list list))
   (let ((result '()))
     (dolist (elt list result)

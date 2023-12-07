@@ -2,6 +2,11 @@
 
 (declaim (declaration method-properties))
 
+(defmethod make-sequence-like (sequence length
+                               &key initial-element initial-contents)
+  (declare (ignore length initial-element initial-contents))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod make-sequence-like ((list list) length
                                &key
                                  (initial-element nil initial-element-p)

@@ -1,5 +1,9 @@
 (cl:in-package #:consecution)
 
+(defmethod remove-if-not (test sequence &key from-end start end count key)
+  (declare (ignore from-end start end count key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod remove-if-not (test (list list) &key from-end (start 0) end count key)
   (with-predicate (predicate test)
     (with-key-function (key key)

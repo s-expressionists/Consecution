@@ -2,7 +2,6 @@
 
 (defpackage #:consecution
   (:use #:common-lisp)
-  (:local-nicknames (#:alx #:alexandria))
   (:import-from
    #:fast-generic-functions
    #:fast-generic-function

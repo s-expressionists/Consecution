@@ -1,5 +1,9 @@
 (cl:in-package #:consecution)
 
+(defmethod sort (sequence predicate &key key)
+  (declare (ignore predicate key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod sort ((list list) predicate &key key)
   (stable-sort list predicate :key key))
 

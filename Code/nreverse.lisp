@@ -1,5 +1,8 @@
 (cl:in-package #:consecution)
 
+(defmethod nreverse (sequence)
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod nreverse ((list list) &aux (result '()))
   (loop until (endp list) do
     (rotatef list (cdr list) result))

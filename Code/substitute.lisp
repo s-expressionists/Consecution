@@ -1,5 +1,10 @@
 (cl:in-package #:consecution)
 
+(defmethod substitute (newitem olditem sequence
+                       &key from-end test test-not start end count key)
+  (declare (ignore newitem olditem from-end test test-not start end count key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (progn
   (replicate-for-each-vector-class #1=#:vector-class
     (defmethod substitute (newitem olditem (sequence #1#)

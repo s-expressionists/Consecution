@@ -2,7 +2,7 @@
 
 (defmacro with-predicate ((name predicate &key (arity 1)) &body body)
   (let ((args (loop repeat arity collect (gensym))))
-    (alx:with-gensyms (f)
+    (alexandria:with-gensyms (f)
       `(let ((,f (function-designator-function ,predicate)))
          (declare (function ,f))
          (flet ((,name ,args (funcall ,f ,@args)))

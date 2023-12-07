@@ -1,5 +1,10 @@
 (cl:in-package #:consecution)
 
+(defmethod nsubstitute-if-not (newitem predicate sequence
+                               &key from-end start end count key)
+  (declare (ignore newitem predicate from-end start end count key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod nsubstitute-if-not (newitem predicate (list list)
                                &key from-end (start 0) end count key)
   (let ((count (canonicalize-count count))

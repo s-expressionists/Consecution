@@ -2,6 +2,10 @@
 
 (defparameter *delete-duplicates-hash-threshold* 27)
 
+(defmethod delete-duplicates (sequence &key from-end test test-not start end key)
+  (declare (ignore from-end test test-not start end key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod delete-duplicates ((list list) &key from-end test test-not (start 0) end key)
   (with-list-start-and-end (start end) (list start end)
     (let* ((amount (- end start))

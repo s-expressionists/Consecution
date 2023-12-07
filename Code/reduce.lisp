@@ -1,6 +1,12 @@
 (cl:in-package #:consecution)
 
 (defmethod reduce
+    (function sequence
+     &key key from-end start end initial-value)
+  (declare (ignore function key from-end start end initial-value))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
+(defmethod reduce
     (function (list list)
      &key key from-end (start 0) end (initial-value nil initial-value-p))
   (let ((function (function-designator-function function))

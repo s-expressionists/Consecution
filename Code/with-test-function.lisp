@@ -1,8 +1,8 @@
 (cl:in-package #:consecution)
 
 (defmacro with-test-function ((name test test-not) &body body)
-  (alx:with-gensyms (f complementp)
-    (alx:once-only (test test-not)
+  (alexandria:with-gensyms (f complementp)
+    (alexandria:once-only (test test-not)
       `(multiple-value-bind (,f ,complementp)
            (canonicalize-test-and-test-not ,test ,test-not)
          (declare (function ,f))

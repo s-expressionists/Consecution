@@ -4,9 +4,9 @@
     ((cons index list start end &optional (from-end nil)) &body body)
   (check-type cons symbol)
   (check-type index symbol)
-  (alx:once-only (list start end)
+  (alexandria:once-only (list start end)
     (let ((forward
-            (alx:with-gensyms (iterator more)
+            (alexandria:with-gensyms (iterator more)
               `(with-cons-iterator (,iterator) (,list ,start ,end)
                  (loop
                    (multiple-value-bind (,more ,cons ,index) (,iterator)
@@ -14,7 +14,7 @@
                      (unless ,more (return))
                      ,@body)))))
           (backward
-            (alx:with-gensyms (fn rest length)
+            (alexandria:with-gensyms (fn rest length)
               `(with-list-start-and-end (,start ,end ,length) (,list ,start ,end)
                  (setf ,list (nthcdr ,start ,list))
                  (setf ,length (- ,end ,start))

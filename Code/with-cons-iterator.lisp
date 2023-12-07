@@ -5,8 +5,8 @@
      (list start end)
      &body body)
   (check-type name symbol)
-  (alx:once-only (list start end)
-    (alx:with-gensyms (head rest index limit)
+  (alexandria:once-only (list start end)
+    (alexandria:with-gensyms (head rest index limit)
       `(if (not (typep ,start 'list-length))
            (error 'invalid-start-index
                   :expected-type 'list-length

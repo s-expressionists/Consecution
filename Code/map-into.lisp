@@ -1,5 +1,9 @@
 (cl:in-package #:consecution)
 
+(defmethod map-into (sequence function &rest sequences)
+  (declare (ignore function sequences))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod map-into ((list list) function &rest sequences)
   (let ((function (function-designator-function function))
         (rest list))

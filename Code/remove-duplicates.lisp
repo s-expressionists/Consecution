@@ -1,5 +1,9 @@
 (cl:in-package #:consecution)
 
+(defmethod remove-duplicates (sequence &key from-end test test-not start end key)
+  (declare (ignore from-end test test-not start end key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod remove-duplicates ((list list) &key from-end test test-not (start 0) end key)
   (delete-duplicates
    (copy-seq list)

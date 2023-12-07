@@ -22,6 +22,9 @@
         when (= position index) do (loop-finish)
           finally (return rest)))
 
+(defmethod elt (sequence index)
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod elt ((list list) index)
   (declare (method-properties inlineable))
   (check-type index list-index)

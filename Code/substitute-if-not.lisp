@@ -1,5 +1,10 @@
 (cl:in-package #:consecution)
 
+(defmethod substitute-if-not (newitem predicate sequence
+                              &key from-end start end count key)
+  (declare (ignore newitem predicate from-end start end count key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (progn
   (replicate-for-each-vector-class #1=#:vector-class
     (defmethod substitute-if-not (newitem predicate (sequence #1#)

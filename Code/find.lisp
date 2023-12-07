@@ -2,6 +2,10 @@
 
 (declaim (declaration method-properties))
 
+(defmethod find (item sequence &key from-end test test-not start end key)
+  (declare (ignore item from-end test test-not start end key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod find (item (list list) &key from-end test test-not (start 0) end key)
   (declare (method-properties inlineable))
   (with-test-function (test test test-not)

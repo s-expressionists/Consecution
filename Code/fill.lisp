@@ -2,6 +2,10 @@
 
 (declaim (declaration method-properties))
 
+(defmethod fill (sequence item &key start end)
+  (declare (ignore item start end))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod fill ((list list) item &key (start 0) end)
   (declare (method-properties inlineable))
   (for-each-relevant-cons (cons index list start end)

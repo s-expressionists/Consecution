@@ -1,5 +1,10 @@
 (cl:in-package #:consecution)
 
+(defmethod nsubstitute (newitem olditem sequence
+                        &key from-end test test-not start end count key)
+  (declare (ignore newitem olditem from-end test test-not start end count key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod nsubstitute (newitem olditem (list list)
                         &key from-end test test-not (start 0) end count key)
   (let ((count (canonicalize-count count))

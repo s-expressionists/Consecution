@@ -1,8 +1,8 @@
 (cl:in-package #:consecution)
 
 (defmacro with-key-function ((name key) &body body)
-  (alx:with-gensyms (f)
-    (alx:once-only (key)
+  (alexandria:with-gensyms (f)
+    (alexandria:once-only (key)
       `(let ((,f (if (null ,key) nil (function-designator-function ,key))))
          (declare (type (or function null) ,f))
          (flet ((,name (x) (if (null ,f) x (funcall ,f x))))

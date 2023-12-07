@@ -1,5 +1,9 @@
 (cl:in-package #:consecution)
 
+(defmethod stable-sort (sequence predicate &key key)
+  (declare (ignore predicate key))
+  (error 'type-error :datum sequence :expected-type 'sequence))
+
 (defmethod stable-sort ((list list) predicate &key key)
   (declare (list list))
   (with-predicate (predicate predicate :arity 2)
@@ -13,7 +17,7 @@
              (let* ((n (length conses))
                     (first-cons (nth (first permutation) conses))
                     (last-cons (nth (nth (1- n) permutation) conses)))
-               (alx:with-gensyms (rest)
+               (alexandria:with-gensyms (rest)
                  `(let ((,rest (cdr ,(first (last conses)))))
                     ;; Set the correct successor for each cons.
                     ,@(loop for (i j) on permutation

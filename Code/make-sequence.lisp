@@ -13,7 +13,7 @@
                (and (eql (first rest) :initial-element)
                     (= 2 (length rest)))))
       (let ((type (eval result-type)))
-        (alx:with-gensyms (result)
+        (alexandria:with-gensyms (result)
           `(let ((,result (make-sequence-like ',(reify-sequence-type-specifier type env) ,length ,@rest)))
              (check-result-type ,result ,type)
              ,result)))
