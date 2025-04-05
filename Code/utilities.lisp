@@ -72,11 +72,14 @@
 (defparameter *relevant-vector-classes*
   (loop for vector-class in *vector-classes*
         for element-type = (vector-class-element-type vector-class)
-        when (or (member element-type '(t character base-char fixnum bit))
-                 (member element-type '(short-float single-float double-float long-float))
+        when (or (member element-type
+                         '(t character base-char fixnum bit))
+                 (member element-type
+                         '(short-float single-float double-float long-float))
                  (and (consp element-type)
                       (or (eql (car element-type) 'complex)
-                          (and (member (car element-type) '(unsigned-byte signed-byte))
+                          (and (member (car element-type)
+                                       '(unsigned-byte signed-byte))
                                (power-of-two-p (cadr element-type))))))
           collect vector-class))
 
