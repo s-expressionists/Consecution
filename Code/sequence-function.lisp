@@ -23,3 +23,7 @@
               do (error 'type-error
                         :expected-type 'sequence
                         :datum argument))))
+
+(defmacro define-sequence-function (name lambda-list)
+  `(defgeneric ,name ,lambda-list
+     (:generic-function-class sequence-function)))
