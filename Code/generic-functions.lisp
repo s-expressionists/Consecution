@@ -1,182 +1,139 @@
 (cl:in-package #:consecution)
 
-(defgeneric copy-seq
-    (sequence)
-  (:generic-function-class sequence-function))
+(define-sequence-function copy-seq
+    (sequence))
 
-(defgeneric elt
-    (sequence index)
-  (:generic-function-class sequence-function))
+(define-sequence-function elt
+    (sequence index))
 
-(defgeneric (setf elt)
-    (value sequence index)
-  (:generic-function-class sequence-function))
+(define-sequence-function (setf elt)
+    (value sequence index))
 
-(defgeneric fill
-    (sequence item &key start end)
-  (:generic-function-class sequence-function))
+(define-sequence-function fill
+    (sequence item &key start end))
 
-(defgeneric make-sequence-like
-    (prototype length &key initial-element initial-contents)
-  (:generic-function-class sequence-function))
+(define-sequence-function make-sequence-like
+    (prototype length &key initial-element initial-contents))
 
-(defgeneric adjust-sequence
-    (sequence length &key initial-element initial-contents)
-  (:generic-function-class sequence-function))
+(define-sequence-function adjust-sequence
+    (sequence length &key initial-element initial-contents))
 
-(defgeneric subseq
-    (sequence start &optional end)
-  (:generic-function-class sequence-function))
+(define-sequence-function subseq
+    (sequence start &optional end))
 
-(defgeneric map-into
-    (result-sequence function &rest sequences)
-  (:generic-function-class sequence-function))
+(define-sequence-function map-into
+    (result-sequence function &rest sequences))
 
-(defgeneric reduce
-    (function sequence &key key from-end start end initial-value)
-  (:generic-function-class sequence-function))
+(define-sequence-function reduce
+    (function sequence &key key from-end start end initial-value))
 
-(defgeneric count
-    (item sequence &key from-end start end key test test-not)
-  (:generic-function-class sequence-function))
+(define-sequence-function count
+    (item sequence &key from-end start end key test test-not))
 
-(defgeneric count-if
-    (predicate sequence &key from-end start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function count-if
+    (predicate sequence &key from-end start end key))
 
-(defgeneric count-if-not
-    (predicate sequence &key from-end start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function count-if-not
+    (predicate sequence &key from-end start end key))
 
-(defgeneric length
-    (sequence)
-  (:generic-function-class sequence-function))
+(define-sequence-function length
+    (sequence))
 
-(defgeneric reverse
-    (sequence)
-  (:generic-function-class sequence-function))
+(define-sequence-function reverse
+    (sequence))
 
-(defgeneric nreverse
-    (sequence)
-  (:generic-function-class sequence-function))
+(define-sequence-function nreverse
+    (sequence))
 
-(defgeneric sort
-    (sequence predicate &key key)
-  (:generic-function-class sequence-function))
+(define-sequence-function sort
+    (sequence predicate &key key))
 
-(defgeneric stable-sort
-    (sequence predicate &key key)
-  (:generic-function-class sequence-function))
+(define-sequence-function stable-sort
+    (sequence predicate &key key))
 
-(defgeneric find
-    (item sequence &key from-end test test-not start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function find
+    (item sequence &key from-end test test-not start end key))
 
-(defgeneric find-if
-    (predicate sequence &key from-end start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function find-if
+    (predicate sequence &key from-end start end key))
 
-(defgeneric find-if-not
-    (predicate sequence &key from-end start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function find-if-not
+    (predicate sequence &key from-end start end key))
 
-(defgeneric position
-    (item sequence &key from-end test test-not start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function position
+    (item sequence &key from-end test test-not start end key))
 
-(defgeneric position-if
-    (predicate sequence &key from-end start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function position-if
+    (predicate sequence &key from-end start end key))
 
-(defgeneric position-if-not
-    (predicate sequence &key from-end start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function position-if-not
+    (predicate sequence &key from-end start end key))
 
-(defgeneric search
-    (sequence-1 sequence-2 &key from-end test test-not key start1 start2 end1 end2)
-  (:generic-function-class sequence-function))
+(define-sequence-function search
+    (sequence-1 sequence-2 &key from-end test test-not key start1 start2 end1 end2))
 
-(defgeneric mismatch
-    (sequence-1 sequence-2 &key from-end test test-not key start1 start2 end1 end2)
-  (:generic-function-class sequence-function))
+(define-sequence-function mismatch
+    (sequence-1 sequence-2 &key from-end test test-not key start1 start2 end1 end2))
 
-(defgeneric replace
-    (sequence-1 sequence-2 &key start1 end1 start2 end2)
-  (:generic-function-class sequence-function))
+(define-sequence-function replace
+    (sequence-1 sequence-2 &key start1 end1 start2 end2))
 
-(defgeneric substitute
-    (newitem olditem sequence &key from-end test test-not start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function substitute
+    (newitem olditem sequence &key from-end test test-not start end count key))
 
-(defgeneric substitute-if
-    (newitem predicate sequence &key from-end start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function substitute-if
+    (newitem predicate sequence &key from-end start end count key))
 
-(defgeneric substitute-if-not
-    (newitem predicate sequence &key from-end start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function substitute-if-not
+    (newitem predicate sequence &key from-end start end count key))
 
-(defgeneric nsubstitute
-    (newitem olditem sequence &key from-end test test-not start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function nsubstitute
+    (newitem olditem sequence &key from-end test test-not start end count key))
 
-(defgeneric nsubstitute-if
-    (newitem predicate sequence &key from-end start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function nsubstitute-if
+    (newitem predicate sequence &key from-end start end count key))
 
-(defgeneric nsubstitute-if-not
-    (newitem predicate sequence &key from-end start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function nsubstitute-if-not
+    (newitem predicate sequence &key from-end start end count key))
 
-(defgeneric remove
-    (item sequence &key from-end test test-not start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function remove
+    (item sequence &key from-end test test-not start end count key))
 
-(defgeneric remove-if
-    (test sequence &key from-end start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function remove-if
+    (test sequence &key from-end start end count key))
 
-(defgeneric remove-if-not
-    (test sequence &key from-end start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function remove-if-not
+    (test sequence &key from-end start end count key))
 
-(defgeneric delete
-    (item sequence &key from-end test test-not start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function delete
+    (item sequence &key from-end test test-not start end count key))
 
-(defgeneric delete-if
-    (test sequence &key from-end start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function delete-if
+    (test sequence &key from-end start end count key))
 
-(defgeneric delete-if-not
-    (test sequence &key from-end start end count key)
-  (:generic-function-class sequence-function))
+(define-sequence-function delete-if-not
+    (test sequence &key from-end start end count key))
 
-(defgeneric remove-duplicates
-    (sequence &key from-end test test-not start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function remove-duplicates
+    (sequence &key from-end test test-not start end key))
 
-(defgeneric delete-duplicates
-    (sequence &key from-end test test-not start end key)
-  (:generic-function-class sequence-function))
+(define-sequence-function delete-duplicates
+    (sequence &key from-end test test-not start end key))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; Auxiliary Functions
 
-(defgeneric make-sequence-scanner (sequence)
-  (:generic-function-class sequence-function))
+(define-sequence-function make-sequence-scanner (sequence))
 
-(defgeneric concatenate-sequence-like (prototype &rest sequences)
-  (:generic-function-class sequence-function))
+(define-sequence-function
+    concatenate-sequence-like (prototype &rest sequences))
 
-(defgeneric merge-sequence-like (prototype sequence-1 sequence-2 predicate &key key)
-  (:generic-function-class sequence-function))
+(define-sequence-function merge-sequence-like
+    (prototype sequence-1 sequence-2 predicate &key key))
 
-(defgeneric make-sequence-reader
-    (sequence start end from-end terminate)
-  (:generic-function-class sequence-function))
+(define-sequence-function make-sequence-reader
+    (sequence start end from-end terminate))
 
-(defgeneric make-sequence-writer
-    (sequence start end from-end terminate)
-  (:generic-function-class sequence-function))
+(define-sequence-function make-sequence-writer
+    (sequence start end from-end terminate))
