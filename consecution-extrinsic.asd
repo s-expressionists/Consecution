@@ -14,16 +14,16 @@
     :components
     ((:file "packages")
 
-   ;; Load all types, conditions, and utilities.
+     ;; Load all types, conditions, and utilities.
      (:file "types")
      (:file "conditions")
      (:file "condition-reporters-en")
      (:file "sequence-function")
      (:file "generic-functions")
 
-     ;; Load the a few elementary sequence functions and seal
-     ;; them.  This way, the subsequent definitions can already use
-     ;; optimized versions of them.
+     ;; Load the a few elementary sequence functions and seal them.
+     ;; This way, the subsequent definitions can already use optimized
+     ;; versions of them.
      (:file "length")
      (:file "elt")
 
@@ -40,10 +40,11 @@
      (:file "for-each-relevant-element")
      (:file "sequence-scanner")
 
-     ;; Now that all utilities and elementary sequence functions have been
-     ;; defined, it is possible to load the remaining functions.  The order
-     ;; is mostly alphabetical, except that some very important functions
-     ;; like MAKE-SEQUENCE and NREVERSE are loaded early.
+     ;; Now that all utilities and elementary sequence functions have
+     ;; been defined, it is possible to load the remaining functions.
+     ;; The order is mostly alphabetical, except that some very
+     ;; important functions like MAKE-SEQUENCE and NREVERSE are loaded
+     ;; early.
      (:file "adjust-sequence")
      (:file "make-sequence")
      (:file "make-sequence-like")
