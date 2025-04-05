@@ -64,11 +64,11 @@
         unless (closer-mop:class-direct-subclasses (find-class vector-class))
           collect vector-class))
 
-;; Some implementations provide a very long list of vector classes, e.g.,
-;; (simple-array (unsigned-byte 63) (*)).  Creating a special variant of
-;; each sequence function and for each of these vector classes increases
-;; compile times and code bloat substantially, so we prune this list a
-;; little bit.
+;;; Some implementations provide a very long list of vector classes,
+;;; e.g., (simple-array (unsigned-byte 63) (*)).  Creating a special
+;;; variant of each sequence function and for each of these vector
+;;; classes increases compile times and code bloat substantially, so
+;;; we prune this list a little bit.
 (defparameter *relevant-vector-classes*
   (loop for vector-class in *vector-classes*
         for element-type = (vector-class-element-type vector-class)
